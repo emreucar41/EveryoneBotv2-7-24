@@ -1,5 +1,6 @@
 const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
+const FFMPEG = require("FFMPEG");
 const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
 let green = botconfig.green;
