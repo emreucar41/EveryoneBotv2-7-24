@@ -96,23 +96,6 @@ bot.on("message", async message => {
      message.delete();
      return message.reply("Please Wait 3 Seconds.")
    }
-   if(!message.member.roles.some(r=>["🖲CODER🖲"].includes(r.name))) return message.channel.send("No.")
-   if(message.member.roles.some(r=>["🖲CODER🖲"].includes(r.name))){
-   if(message.content === `${prefix}etkinlik`){
-
-    let etk = args.slice(1).join(" ")
-
-    var channel = bot.channels.get("545311814783598612");
-        let embed = new Discord.RichEmbed()
-        .setColor("RED")
-        .setDescription("Etkinlik", message.author.avatarURL)
-        .addField("** :bear: Etkinlik Başlasın :bear: **", "İlk {*kazandım} Yazan Kişi //Etkinlik// Rolünü Kapar Hızlı Ol.")
-        message.channel.send(embed)     
-      }else {
-        if(message.content === `${prefix}kazandım`)
-             message.reply(" :zap: Dur./ " + message.author.username + " Kazandı İlk Yazan Kişi Olduğu İçin //Etkinlik// Rolünün Sahibi Oldu. :zap: ");
-       }
-    }
        // if(!message.member.hasPermission("ADMINISTRATOR")){
      cooldown.add(message.author.id);
    // }
