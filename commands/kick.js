@@ -4,7 +4,7 @@ const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
 
-    if(!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"]) || message.author.id === '471590154927210497') return message.channel.send(" You Don't Have Permission To Perform This Command!")
+    if(!message.member.hasPermission(["KICK_MEMBERS", "ADMINISTRATOR"] || message.author.id === '471590154927210497')) return message.channel.send(" You Don't Have Permission To Perform This Command!")
 
     let kickMember = message.mentions.members.first() || message.guild.members.get(args[0])
     if(!kickMember) return message.channel.send("Please Provide A User To Kick!")
